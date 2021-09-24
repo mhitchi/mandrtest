@@ -1,0 +1,41 @@
+.single {
+    .header-title {
+        a {
+            color: #fff;
+            transition: all 0.3s ease;
+            &:hover {
+                color: $color-green;
+                text-decoration-color: $color-green;
+            }
+        }
+
+        h1 {
+            margin-bottom: 24px;
+        }
+
+        time,
+        .breadcrumbs {
+            margin-bottom: 4px;
+            font-size: 16px;
+            font-weight: bold;
+
+            @media (max-width: $mobile-med) {
+                font-size: 14px;
+            }
+        }
+
+        .cat-list {
+            margin-bottom: 0;
+            font-size: 16px;
+
+            @media (max-width: $mobile-med) {
+                font-size: 15px;
+            }
+        }
+
+        .breadcrumbs {
+            margin-bottom: 0;
+            margin-top: 24px;
+        }
+    }
+}

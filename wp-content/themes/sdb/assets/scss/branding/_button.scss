@@ -1,0 +1,69 @@
+button.button,
+button.content-limiter-expander,
+input[type='button'],
+input[type='reset'],
+input[type='submit'],
+.button {
+    width: auto;
+    padding: 12px 28px;
+    background: $color-green;
+    color: $color-darkblue;
+    font-weight: 700;
+    text-decoration: none !important;
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    cursor: pointer;
+    transition: color 0.3s ease,
+        background 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+
+    @media (max-width: $second-break) {
+        padding: 12px 20px;
+    }
+
+    &:hover,
+    &:focus {
+        background: $color-blue;
+        color: #fff;
+    }
+    &:active {
+        transform: translateY(2px);
+    }
+}
+
+.button {
+    display: inline-block;
+    margin-bottom: 24px; /* match p margin-bottom inside typography.scss */
+
+    &--clear {
+        background: transparent;
+        border: none;
+        padding: 0;
+    }
+}
+
+.center-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p.centered-button {
+    text-align: center;
+}
+
+/* Hide button mobile text on desktops */
+.mobile-text {
+    display: none;
+
+    @media (max-width: $mobile-break) {
+        display: block;
+    }
+}
+
+/* Hide button desktop text on mobile */
+.mobile-text + .text-wrap {
+    @media (max-width: $mobile-break) {
+        display: none;
+    }
+}

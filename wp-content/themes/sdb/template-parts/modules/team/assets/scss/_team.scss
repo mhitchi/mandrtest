@@ -1,0 +1,272 @@
+.team__container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .teammember {
+        position: relative;
+        float: left;
+        width: 22%;
+        margin-left: 4%;
+        margin-bottom: 72px;
+        text-align: center;
+
+        &__title {
+            margin: 12px 24px;
+        }
+
+        &:nth-child(4n + 1) {
+            margin-left: 0;
+            clear: both;
+        }
+
+        &__image {
+            margin-bottom: 24px;
+            box-shadow: 0 0 1px #000;
+            transition: all 0.4s cubic-bezier(0.2, 0.69, 0.49, 0.98);
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            &__image {
+                box-shadow: 0 0 8px #000;
+                transform: scale(1.05) rotate3d(0, 0, 0, 0);
+            }
+        }
+    }
+    @media screen and (max-width: $vlarge-break) {
+        .teammember {
+            width: 31%;
+            margin-left: 3.5%;
+            &:nth-child(4n + 1) {
+                margin-left: 3.5%;
+                clear: none;
+            }
+            &:nth-child(3n + 1) {
+                margin-left: 0;
+                clear: both;
+            }
+
+            &__image {
+                margin-bottom: 12px;
+            }
+
+            &__title {
+                margin-bottom: 12px;
+            }
+        }
+    }
+    @media screen and (max-width: $second-break) {
+        .teammember {
+            width: 48%;
+            margin-left: 4%;
+            &:nth-child(4n + 1) {
+                margin-left: 4%;
+                clear: none;
+            }
+            &:nth-child(3n + 1) {
+                margin-left: 4%;
+                clear: none;
+            }
+            &:nth-child(2n + 1) {
+                margin-left: 0;
+                clear: both;
+            }
+        }
+    }
+    @media screen and (max-width: $mobile-small) {
+        .teammember {
+            width: 400px;
+            max-width: 90%;
+            margin-left: auto !important;
+            margin-right: auto;
+        }
+    }
+}
+.teammember__title {
+    &__name {
+        display: block;
+        font-size: 26px;
+        margin-bottom: 2px;
+        font-weight: bold;
+    }
+    &__title {
+        display: block;
+        font-size: 22px;
+        font-weight: normal;
+        text-transform: capitalize;
+    }
+
+    @media (max-width: $mobile-med) {
+        &__name {
+            font-size: 24px;
+        }
+        &__title {
+            font-size: 22px;
+        }
+    }
+}
+/**
+ * Modal Popup Styling
+ */
+body.modal-active {
+    overflow: hidden;
+}
+.modal {
+    background-color: #fff;
+    position: fixed;
+    z-index: -1;
+    width: 1220px;
+    max-width: 90%;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    padding: 48px;
+    opacity: 0;
+    pointer-events: none;
+    overflow-y: scroll;
+    max-height: 80%;
+    border: none;
+
+    .container {
+        max-width: 100%;
+    }
+    .inner-wrap {
+        display: flex;
+    }
+    .left-content {
+        width: 250px;
+        text-align: center;
+    }
+    .right-content {
+        width: calc(100% - 250px);
+        padding-right: 72px;
+        padding-left: 6%;
+    }
+    img {
+        display: block;
+        width: 100%;
+        margin: 0 0 12px;
+    }
+
+    .modal-content {
+        padding-bottom: 80px 64px;
+    }
+
+    @media screen and (max-width: $second-break) {
+        width: 90%;
+        .container {
+            padding: 0;
+        }
+        .inner-wrap {
+            display: block;
+        }
+        .left-content {
+            width: 100%;
+            margin-bottom: 18px;
+
+            img {
+                max-width: 300px;
+                margin: 0 auto 12px;
+            }
+        }
+        .right-content {
+            width: 100%;
+            padding: 0 24px 32px;
+        }
+    }
+    @media screen and (max-width: $mobile-med) {
+        .modal-content {
+            font-size: 16px;
+        }
+    }
+    @media screen and (max-width: $mobile-small) {
+        top: 5%;
+        width: 94%;
+        max-width: 94%;
+        padding: 32px;
+    }
+    .close-button {
+        background: none;
+        position: absolute;
+        z-index: 5;
+        top: 18px;
+        right: 24px;
+        display: inline-block;
+        width: 72px;
+        height: 72px;
+        border: none;
+        cursor: pointer;
+
+        &:before,
+        &:after {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 6px;
+            background-color: $color-blue;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 32px;
+            left: 14px;
+            transform: translate3d(0, 0, 0) rotate(-45deg);
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 39px;
+            left: 14px;
+            transform: translate3d(0, -8px, 0) rotate(45deg);
+        }
+
+        &:hover,
+        &:focus {
+        }
+    }
+
+    /* Animation effect for modal */
+    &.modal-open {
+        z-index: 202;
+        opacity: 1;
+        pointer-events: visible;
+        transition: opacity 450ms ease;
+
+        .inner-wrap {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: visible;
+            transition: all 850ms 50ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+    }
+
+    /* Animation effect for outgoing modal */
+    &.modal-close {
+        opacity: 0;
+        pointer-events: hidden;
+        transition: opacity 450ms ease;
+
+        .inner-wrap {
+            transform: translateY(-40px);
+            opacity: 0;
+            pointer-events: hidden;
+            transition: all 850ms 50ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+    }
+}
+
+/* Stop scrolling when modal active */
+// body.modal-active {
+//     overflow: hidden;
+// }
+
+/* Show navigation overlay */
+body.modal-active .navigation-overlay {
+    opacity: 0.6;
+    visibility: visible;
+    z-index: 201;
+}

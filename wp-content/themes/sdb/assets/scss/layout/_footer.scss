@@ -1,0 +1,148 @@
+/*
+Site Footer
+---------------------------------------------------------------------------------------------------- */
+
+.footer {
+    position: relative;
+    background-color: $color-lightblue;
+    font-size: 18px;
+    @media (max-width: $laptop-break) {
+        font-size: 17px;
+    }
+    @media (max-width: $mobile-break) {
+        font-size: 16px;
+    }
+
+    a {
+        color: $color-darkblue;
+        text-decoration: none;
+
+        img {
+            transition: all 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+        }
+        &:hover {
+            text-decoration: underline;
+            img {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    &__primary {
+        &__inner {
+            display: flex;
+            justify-content: center;
+
+            @media (max-width: $mobile-break) {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        .footer-1,
+        .footer-2,
+        .footer-3 {
+            padding: 0 12px;
+        }
+
+        .footer-1 {
+            width: 30%;
+            text-align: center;
+            margin-bottom: 48px;
+            @media (max-width: $mobile-break) {
+                width: 100%;
+                margin-bottom: 32px;
+            }
+        }
+
+        .footer-2 {
+            width: 37%;
+            margin-left: 4%;
+            padding-left: 4%;
+            border-left: 2px solid $color-green;
+
+            @media (max-width: $mobile-break) {
+                width: 342px;
+                max-width: 90%;
+                margin: 0 auto 32px;
+                text-align: left;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-size: 20px;
+                @media (max-width: $laptop-break) {
+                    font-size: 19px;
+                }
+                @media (max-width: $mobile-break) {
+                    font-size: 18px;
+                }
+            }
+        }
+        .footer-3 {
+            width: 33%;
+            margin-left: 4%;
+            padding-left: 4%;
+            border-left: 2px solid $color-green;
+            @media (max-width: $mobile-break) {
+                width: 342px;
+                max-width: 90%;
+                margin: 0 auto 32px;
+                text-align: left;
+            }
+        }
+
+        .footer__logo {
+            display: inline-block;
+            margin-bottom: 12px;
+            width: 216px;
+        }
+
+        .footer-menu {
+            li {
+                margin-bottom: 2px;
+            }
+            a {
+                display: block;
+                text-decoration: none;
+
+                .link-text {
+                    border-bottom: 2px solid transparent;
+                    transition: all 0.3s cubic-bezier(0.21, 0.66, 0.79, 1);
+                }
+
+                &:hover {
+                    text-decoration: none;
+                    .link-text {
+                        border-bottom: 2px solid $color-green;
+                    }
+                }
+            }
+
+            > .menu-item > a {
+                font-size: 20px;
+                font-weight: bold;
+                @media (max-width: $laptop-break) {
+                    font-size: 19px;
+                }
+                @media (max-width: $mobile-break) {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        margin-top: 76px;
+        padding: 16px 5% 20px;
+        text-align: center;
+        font-size: 15px;
+        @media (max-width: $mobile-break) {
+            margin-top: 16px;
+        }
+    }
+}

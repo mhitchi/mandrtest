@@ -1,0 +1,132 @@
+.testimonials {
+    display: block;
+
+    // &__wrap {
+    //     padding: $spacing-sm 0;
+    // }
+
+    .testimonial {
+        text-align: center;
+
+        &__image {
+            object-fit: cover;
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            margin-bottom: $spacing-xs;
+        }
+        
+        &__content {
+            font-style: italic;
+        }
+    }
+}
+
+.testimonials--list {
+    .testimonial {
+        background-color: #eee;
+        width: 100%;
+        padding: $spacing-sm;
+
+        @media (min-width: $mobile-break){
+            float: left;
+            width: $column-one-half;
+
+            &:nth-of-type(even) {
+                margin-left: $column-margin;
+            }
+    
+            &:nth-of-type(n+3){
+                margin-top: $spacing-sm;
+            }
+        }
+
+        @media (max-width: $mobile-break-max){
+            + .testimonial {
+                margin-top: $spacing-sm;
+            }
+        }
+    }
+}
+
+.testimonials--carousel {
+    .testimonials {
+        &__wrap {
+            &__controls {
+                display: flex;
+                width: 100%;
+                height: auto;
+                justify-content: center;
+    
+                .slick-prev {
+                    order: 0;
+                    left: 0;
+                }
+                .slick-dots {
+                    order: 1;
+                }
+                .slick-next {
+                    order: 2;
+                    right: 0;
+                }
+    
+                .slick-dots,
+                .slick-arrow {
+                    position: relative;
+                }
+    
+                .slick-prev,
+                .slick-next {
+                    top: 0;
+                    transform: none;
+    
+                    &:before {
+                        color: #000;
+                        font-family: 'ikes';
+                    }
+                }
+    
+                .slick-prev:before {
+                    content: $ikes-chevron-left;
+                }
+                .slick-next:before {
+                    content: $ikes-chevron-right;
+                }
+    
+                .slick-dots {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    bottom: 0;
+                    margin-bottom: 0;
+
+                    li {
+                        width: auto;
+                        height: auto;
+    
+                        button {
+                            background-color: #000;
+                            width: 12px;
+                            height: 12px;
+                            padding: 0;
+                            border-radius: 100%;
+        
+                            &:before {
+                                display: none;
+                            }
+                        }
+
+                        &.slick-active button {
+                            background-color: #858585; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .testimonial {
+        &__image {
+            margin: auto auto $spacing-sm;
+        }
+    }
+}

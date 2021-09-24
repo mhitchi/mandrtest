@@ -1,0 +1,629 @@
+@font-face {
+    font-family: '#{$icomoon-font-family}';
+    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf#{$icomoon-cache}')
+            format('truetype'),
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff#{$icomoon-cache}')
+            format('woff'),
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg#{$icomoon-cache}##{$icomoon-font-family}')
+            format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class^='ikes-'],
+[class*=' ikes-'] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: '#{$icomoon-font-family}' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.social-links a {
+    background-color: transparent;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    color: $color-blue !important;
+    font-size: 25px;
+    text-decoration: none;
+    + a {
+        margin-left: 5px;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $color-green;
+        text-decoration: none;
+    }
+}
+
+.ikes-arrow {
+    &:before {
+        content: $ikes-arrow;
+    }
+}
+.ikes-thin-left-arrow {
+    &:before {
+        content: $ikes-thin-left-arrow;
+    }
+}
+.ikes-thin-right-arrow {
+    &:before {
+        content: $ikes-thin-right-arrow;
+    }
+}
+.ikes-arrow-right {
+    &:before {
+        content: $ikes-arrow-right;
+    }
+}
+.ikes-search {
+    &:before {
+        content: $ikes-search;
+    }
+}
+.ikes-chevron-circle-right {
+    &:before {
+        content: $ikes-chevron-circle-right;
+    }
+}
+.ikes-microphone {
+    &:before {
+        content: $ikes-microphone;
+    }
+}
+.ikes-volume-control-phone {
+    &:before {
+        content: $ikes-volume-control-phone;
+    }
+}
+.ikes-phone {
+    &:before {
+        content: $ikes-phone;
+    }
+}
+.ikes-pinterest-p {
+    &:before {
+        content: $ikes-pinterest-p;
+    }
+}
+.ikes-google-plus {
+    &:before {
+        content: $ikes-google-plus;
+    }
+}
+.ikes-cross {
+    &:before {
+        content: $ikes-cross;
+    }
+}
+.ikes-blockquote {
+    &:before {
+        content: $ikes-blockquote;
+    }
+}
+.ikes-news-default {
+    &:before {
+        content: $ikes-news-default;
+    }
+}
+.ikes-home2 {
+    &:before {
+        content: $ikes-home2;
+    }
+}
+.ikes-home3 {
+    &:before {
+        content: $ikes-home3;
+    }
+}
+.ikes-google {
+    &:before {
+        content: $ikes-google;
+    }
+}
+.ikes-twitter {
+    &:before {
+        content: $ikes-twitter;
+    }
+}
+.ikes-instagram {
+    &:before {
+        content: $ikes-instagram;
+    }
+}
+.ikes-vimeo {
+    &:before {
+        content: $ikes-vimeo;
+    }
+}
+.ikes-linkedin {
+    &:before {
+        content: $ikes-linkedin;
+    }
+}
+.ikes-youtube-play {
+    &:before {
+        content: $ikes-youtube-play;
+    }
+}
+.ikes-youtube {
+    &:before {
+        content: $ikes-youtube;
+    }
+}
+.ikes-facebook {
+    &:before {
+        content: $ikes-facebook;
+    }
+}
+.ikes-location {
+    &:before {
+        content: $ikes-location;
+    }
+}
+.ikes-mail-envelope-thin {
+    &:before {
+        content: $ikes-mail-envelope-thin;
+    }
+}
+.ikes-search-alt {
+    &:before {
+        content: $ikes-search-alt;
+    }
+}
+.ikes-search-plus {
+    &:before {
+        content: $ikes-search-plus;
+    }
+}
+.ikes-search-minus {
+    &:before {
+        content: $ikes-search-minus;
+    }
+}
+.ikes-right-quote {
+    &:before {
+        content: $ikes-right-quote;
+    }
+}
+.ikes-left-quote {
+    &:before {
+        content: $ikes-left-quote;
+    }
+}
+.ikes-quote {
+    &:before {
+        content: $ikes-quote;
+    }
+}
+.ikes-menu {
+    &:before {
+        content: $ikes-menu;
+    }
+}
+.ikes-chevrons-up {
+    &:before {
+        content: $ikes-chevrons-up;
+    }
+}
+.ikes-chevrons-right {
+    &:before {
+        content: $ikes-chevrons-right;
+    }
+}
+.ikes-chevrons-left {
+    &:before {
+        content: $ikes-chevrons-left;
+    }
+}
+.ikes-chevrons-down {
+    &:before {
+        content: $ikes-chevrons-down;
+    }
+}
+.ikes-chevron-right {
+    &:before {
+        content: $ikes-chevron-right;
+    }
+}
+.ikes-chevron-left {
+    &:before {
+        content: $ikes-chevron-left;
+    }
+}
+.ikes-chevron-down {
+    &:before {
+        content: $ikes-chevron-down;
+    }
+}
+.ikes-chevron-up {
+    &:before {
+        content: $ikes-chevron-up;
+    }
+}
+.ikes-home {
+    &:before {
+        content: $ikes-home;
+    }
+}
+.ikes-fax {
+    &:before {
+        content: $ikes-fax;
+    }
+}
+.ikes-phone2 {
+    &:before {
+        content: $ikes-phone2;
+    }
+}
+.ikes-video-hover {
+    &:before {
+        content: $ikes-video-hover;
+    }
+}
+.ikes-cart {
+    &:before {
+        content: $ikes-cart;
+    }
+}
+.ikes-clock {
+    &:before {
+        content: $ikes-clock;
+    }
+}
+.ikes-user2 {
+    &:before {
+        content: $ikes-user2;
+    }
+}
+.ikes-users {
+    &:before {
+        content: $ikes-users;
+    }
+}
+.ikes-user-tie {
+    &:before {
+        content: $ikes-user-tie;
+    }
+}
+.ikes-spinner1 {
+    &:before {
+        content: $ikes-spinner1;
+    }
+}
+.ikes-spinner2 {
+    &:before {
+        content: $ikes-spinner2;
+    }
+}
+.ikes-spinner3 {
+    &:before {
+        content: $ikes-spinner3;
+    }
+}
+.ikes-spinner4 {
+    &:before {
+        content: $ikes-spinner4;
+    }
+}
+.ikes-spinner5 {
+    &:before {
+        content: $ikes-spinner5;
+    }
+}
+.ikes-spinner6 {
+    &:before {
+        content: $ikes-spinner6;
+    }
+}
+.ikes-spinner7 {
+    &:before {
+        content: $ikes-spinner7;
+    }
+}
+.ikes-spinner8 {
+    &:before {
+        content: $ikes-spinner8;
+    }
+}
+.ikes-spinner9 {
+    &:before {
+        content: $ikes-spinner9;
+    }
+}
+.ikes-spinner10 {
+    &:before {
+        content: $ikes-spinner10;
+    }
+}
+.ikes-cog {
+    &:before {
+        content: $ikes-cog;
+    }
+}
+.ikes-download {
+    &:before {
+        content: $ikes-download;
+    }
+}
+.ikes-upload {
+    &:before {
+        content: $ikes-upload;
+    }
+}
+.ikes-play {
+    &:before {
+        content: $ikes-play;
+    }
+}
+.ikes-pause {
+    &:before {
+        content: $ikes-pause;
+    }
+}
+.ikes-stop {
+    &:before {
+        content: $ikes-stop;
+    }
+}
+.ikes-backward {
+    &:before {
+        content: $ikes-backward;
+    }
+}
+.ikes-forward {
+    &:before {
+        content: $ikes-forward;
+    }
+}
+.ikes-first {
+    &:before {
+        content: $ikes-first;
+    }
+}
+.ikes-last {
+    &:before {
+        content: $ikes-last;
+    }
+}
+.ikes-previous {
+    &:before {
+        content: $ikes-previous;
+    }
+}
+.ikes-next {
+    &:before {
+        content: $ikes-next;
+    }
+}
+.ikes-volume-high {
+    &:before {
+        content: $ikes-volume-high;
+    }
+}
+.ikes-volume-medium {
+    &:before {
+        content: $ikes-volume-medium;
+    }
+}
+.ikes-volume-low {
+    &:before {
+        content: $ikes-volume-low;
+    }
+}
+.ikes-volume-mute {
+    &:before {
+        content: $ikes-volume-mute;
+    }
+}
+.ikes-volume-mute2 {
+    &:before {
+        content: $ikes-volume-mute2;
+    }
+}
+.ikes-volume-increase {
+    &:before {
+        content: $ikes-volume-increase;
+    }
+}
+.ikes-volume-decrease {
+    &:before {
+        content: $ikes-volume-decrease;
+    }
+}
+.ikes-loop {
+    &:before {
+        content: $ikes-loop;
+    }
+}
+.ikes-share {
+    &:before {
+        content: $ikes-share;
+    }
+}
+.ikes-share2 {
+    &:before {
+        content: $ikes-share2;
+    }
+}
+.ikes-mail-envelope-closed-o {
+    &:before {
+        content: $ikes-mail-envelope-closed-o;
+    }
+}
+.ikes-heart {
+    &:before {
+        content: $ikes-heart;
+    }
+}
+.ikes-star {
+    &:before {
+        content: $ikes-star;
+    }
+}
+.ikes-star-o {
+    &:before {
+        content: $ikes-star-o;
+    }
+}
+.ikes-user {
+    &:before {
+        content: $ikes-user;
+    }
+}
+.ikes-check {
+    &:before {
+        content: $ikes-check;
+    }
+}
+.ikes-times {
+    &:before {
+        content: $ikes-times;
+    }
+}
+.ikes-power-off {
+    &:before {
+        content: $ikes-power-off;
+    }
+}
+.ikes-home1 {
+    &:before {
+        content: $ikes-home1;
+    }
+}
+.ikes-lock {
+    &:before {
+        content: $ikes-lock;
+    }
+}
+.ikes-video-camera {
+    &:before {
+        content: $ikes-video-camera;
+    }
+}
+.ikes-times-circle-o {
+    &:before {
+        content: $ikes-times-circle-o;
+    }
+}
+.ikes-check-circle-o {
+    &:before {
+        content: $ikes-check-circle-o;
+    }
+}
+.ikes-ban {
+    &:before {
+        content: $ikes-ban;
+    }
+}
+.ikes-plus {
+    &:before {
+        content: $ikes-plus;
+    }
+}
+.ikes-minus {
+    &:before {
+        content: $ikes-minus;
+    }
+}
+.ikes-asterisk {
+    &:before {
+        content: $ikes-asterisk;
+    }
+}
+.ikes-comment {
+    &:before {
+        content: $ikes-comment;
+    }
+}
+.ikes-mail-envelope {
+    &:before {
+        content: $ikes-mail-envelope;
+    }
+}
+.ikes-comment-o {
+    &:before {
+        content: $ikes-comment-o;
+    }
+}
+.ikes-smile-o {
+    &:before {
+        content: $ikes-smile-o;
+    }
+}
+.ikes-frown-o {
+    &:before {
+        content: $ikes-frown-o;
+    }
+}
+.ikes-meh-o {
+    &:before {
+        content: $ikes-meh-o;
+    }
+}
+.ikes-question {
+    &:before {
+        content: $ikes-question;
+    }
+}
+.ikes-newspaper-o {
+    &:before {
+        content: $ikes-newspaper-o;
+    }
+}
+.ikes-amazon {
+    &:before {
+        content: $ikes-amazon;
+    }
+}
+.ikes-commenting {
+    &:before {
+        content: $ikes-commenting;
+    }
+}
+.ikes-commenting-o {
+    &:before {
+        content: $ikes-commenting-o;
+    }
+}
+.ikes-snapchat-ghost {
+    &:before {
+        content: $ikes-snapchat-ghost;
+    }
+}
+.ikes-mail-envelope-open {
+    &:before {
+        content: $ikes-mail-envelope-open;
+    }
+}
+.ikes-mail-envelope-open-o {
+    &:before {
+        content: $ikes-mail-envelope-open-o;
+    }
+}
+.ikes-eye {
+    &:before {
+        content: $ikes-eye;
+    }
+}
+.ikes-eye-blocked {
+    &:before {
+        content: $ikes-eye-blocked;
+    }
+}
+.ikes-filter-menu {
+    &:before {
+        content: $ikes-filter-menu;
+    }
+}

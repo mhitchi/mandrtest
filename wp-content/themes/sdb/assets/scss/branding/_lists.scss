@@ -1,0 +1,222 @@
+ul,
+ol {
+    margin: 0 0 24px;
+
+    @media (max-width: $second-break) {
+        margin-bottom: 22px;
+    }
+    @media (max-width: $mobile-break) {
+        margin-bottom: 20px;
+    }
+    @media (max-width: $mobile-med) {
+        margin-bottom: 19px;
+    }
+    @media (max-width: $mobile-small) {
+        margin-bottom: 18px;
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul:not([class]),
+ul.basic-list {
+    padding-left: 24px;
+    li:not([class]) {
+        position: relative;
+        list-style-type: disc;
+
+        &::marker {
+            color: $color-green;
+        }
+    }
+}
+
+p + ul,
+p + .one-half > ul,
+p + .one-half + .one-half > ul {
+    margin-top: -12px;
+}
+
+ul.two-column,
+.two-column-list ul {
+    column-count: 2;
+}
+
+@media (max-width: $mobile-break) {
+    ul.two-column,
+    .two-column-list ul {
+        column-count: 1;
+    }
+}
+
+/**
+ * Create unordered list columns
+ */
+.two-column-lists {
+    ul:not([class]) {
+        @extend .responsive-column-count;
+
+        column-count: 2;
+
+        > li {
+            position: relative;
+
+            break-inside: avoid-column;
+        }
+
+        @media (max-width: $mobile-break) {
+            column-count: 1;
+        }
+    }
+}
+.three-column-lists {
+    ul:not([class]) {
+        column-count: 3;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: left;
+
+        > li {
+            position: relative;
+
+            break-inside: avoid-column;
+        }
+
+        @media (max-width: $mobile-break) {
+            column-count: 2;
+        }
+    }
+}
+
+/**
+ * Automatically spaces list items evenly w/o extra bottom margin on last row
+ */
+$spacing: 35px;
+$mob-spacing: 25px;
+
+ul.two-column-spacer {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+
+    li {
+        &:nth-of-type(n + 3) {
+            margin-top: $spacing;
+        }
+
+        @media (max-width: $mobile-break) {
+            margin-bottom: $mob-spacing;
+
+            &:nth-of-type(n + 3) {
+                margin-top: 0;
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+ul.three-column-spacer {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+
+    li {
+        &:nth-of-type(n + 4) {
+            margin-top: $spacing;
+        }
+
+        @media (max-width: $mobile-break) {
+            margin-bottom: $mob-spacing;
+
+            &:nth-of-type(n + 4) {
+                margin-top: 0;
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    /* if using ".one-*-med" break tag */
+    &.med-break {
+        li {
+            @media (max-width: $second-break) {
+                &:nth-of-type(n + 4) {
+                    margin-top: 0;
+                }
+
+                &:nth-of-type(n + 3) {
+                    margin-top: $mob-spacing;
+                }
+            }
+
+            @media (max-width: $mobile-small) {
+                margin-bottom: $mob-spacing;
+
+                &:nth-of-type(n + 3) {
+                    margin-top: 0;
+                }
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+ul.four-column-spacer {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+
+    li {
+        &:nth-of-type(n + 5) {
+            margin-top: $spacing;
+        }
+
+        @media (max-width: $mobile-break) {
+            margin-bottom: $mob-spacing;
+
+            &:nth-of-type(n + 5) {
+                margin-top: 0;
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    /* if using ".one-*-med" break tag */
+    &.med-break {
+        li {
+            @media (max-width: $second-break) {
+                &:nth-of-type(n + 5) {
+                    margin-top: 0;
+                }
+
+                &:nth-of-type(n + 4) {
+                    margin-top: $mob-spacing;
+                }
+            }
+
+            @media (max-width: $mobile-small) {
+                margin-bottom: $mob-spacing;
+
+                &:nth-of-type(n + 4) {
+                    margin-top: 0;
+                }
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

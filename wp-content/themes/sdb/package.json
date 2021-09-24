@@ -1,0 +1,34 @@
+{
+    "name": "mandr-starter",
+    "version": "3.4.0",
+    "description": "Making websites",
+    "main": "gulpfile.js",
+    "devDependencies": {
+        "@babel/core": "^7.13.15",
+        "@babel/preset-env": "^7.13.15",
+        "autoprefixer": "^10.2.5",
+        "axios": "^0.21.1",
+        "bourbon": "^7.0.0",
+        "dotenv": "^9.0.2",
+        "fs-extra": "^10.0.0",
+        "gulp": "^4.0.2",
+        "gulp-babel": "^8.0.0",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-jshint": "^2.1.0",
+        "gulp-postcss": "^9.0.0",
+        "gulp-rename": "^2.0.0",
+        "gulp-sass": "^4.1.0",
+        "gulp-uglify": "^3.0.2",
+        "jshint": "^2.12.0",
+        "node-sass": "^4.14.1",
+        "postcss": "^8.2.10",
+        "postcss-pxtorem": "^5.1.1"
+    },
+    "dependencies": {
+        "npm": "^6.14.13"
+    },
+    "scripts": {
+        "install-package": "./.bin/install-package.js"
+    }
+}

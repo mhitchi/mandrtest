@@ -1,0 +1,152 @@
+/* Custom Gravity Forms Tooltips */
+
+.gform_fields {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.gfield,
+.gfield li {
+    text-indent: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style-type: none !important;
+
+    &:before {
+        content: normal !important;
+    }
+}
+
+textarea.large {
+    height: 160px !important;
+}
+
+.ginput_counter {
+    display: none;
+}
+
+.gfield_description {
+    position: relative;
+    top: -12px;
+    left: 0;
+    font-size: 14px;
+}
+
+.gfield_list_container {
+    tbody {
+        border: none;
+    }
+}
+
+.gfield_list_group {
+    > td {
+        border: none;
+        padding: 0;
+
+        > input {
+            margin: 0;
+        }
+    }
+}
+
+.validation_message {
+    margin: 0 0 16px;
+    font-size: 14px;
+    font-weight: bold;
+
+    &:before {
+        font-family: 'ikes';
+        content: $ikes-cross;
+        margin-right: 6px;
+        color: $color-red;
+    }
+}
+
+.validation_error {
+    padding: 16px;
+    margin-bottom: 24px;
+    background-color: $color-offwhite;
+    border: 2px solid $color-red;
+}
+
+.gform_validation_container,
+.gform_wrapper .gform_validation_container,
+body .gform_wrapper li.gform_validation_container,
+body
+    .gform_wrapper
+    .gform_body
+    ul.gform_fields
+    li.gfield.gform_validation_container,
+body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
+    display: none !important;
+    position: absolute !important;
+    left: -9000px;
+}
+
+// Password reveal
+.ginput_container_password > span {
+    display: flex;
+
+    button {
+        background-color: #fff;
+        width: 50px;
+        border: none;
+        color: $color-text;
+
+        .dashicons-visibility {
+            &:before {
+                content: $ikes-eye-blocked;
+                font-family: 'ikes';
+            }
+        }
+
+        .dashicons-hidden {
+            &:before {
+                content: $ikes-eye;
+                font-family: 'ikes';
+            }
+        }
+    }
+}
+
+#gform_1 {
+    max-width: 770px;
+    margin: 0 auto;
+}
+
+body .gform_wrapper .gfield_label {
+    font-family: 'Montserrat';
+    font-weight: normal !important;
+    margin-bottom: 0 !important;
+    margin-top: 12px !important;
+}
+
+.gform_confirmation_message,
+.gform_footer {
+    text-align: center;
+}
+.gform_wrapper .gform_validation_errors {
+    max-width: 770px !important;
+    margin: 0 auto 32px !important;
+    border: none !important;
+    background: #fff !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+.gform_wrapper .gfield_required {
+    font-size: 14px !important;
+    font-style: normal !important;
+    color: $color-green !important;
+    margin: 0 !important;
+}
+.gform_wrapper.gravity-theme .gfield-choice-input,
+.gfield_radio .gchoice input,
+.gfield_radio .gchoice label {
+    margin: 0;
+}
+.ginput_container_address {
+    label {
+        font-size: 14px !important;
+        margin-top: -10px !important;
+    }
+}
