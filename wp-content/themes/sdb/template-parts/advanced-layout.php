@@ -23,6 +23,13 @@ if( have_rows('page_layouts') ):
         elseif( get_row_layout() == 'module_pages' ) :
             get_template_part('template-parts/modules/pages/pages');
 
+<<<<<<< HEAD
+=======
+        /* Table Layout */ 
+        elseif( get_row_layout() == 'module_table' ) :
+            get_template_part('template-parts/modules/tables/tables');
+
+>>>>>>> 7c88980af092cc99303e62defe1f425b16467df1
         /* Tab Layout */ 
         elseif( get_row_layout() == 'module_tabs' ) :
             get_template_part('template-parts/modules/tabs/tabs');        
@@ -30,6 +37,13 @@ if( have_rows('page_layouts') ):
         /* Toggle Layout */ 
         elseif( get_row_layout() == 'module_toggles' ) : 
             get_template_part('template-parts/modules/toggles/toggles');
+<<<<<<< HEAD
+=======
+
+        /* Testimonials Layout */	
+        elseif( get_row_layout() == 'module_testimonials' ) :
+            get_template_part('template-parts/modules/testimonials/testimonials');
+>>>>>>> 7c88980af092cc99303e62defe1f425b16467df1
             
         endif; // end if switching statement over layout types
     endwhile; // end while(layouts) loop

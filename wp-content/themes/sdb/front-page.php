@@ -203,6 +203,7 @@ get_header(); ?>
 						<script>
 						jQuery(window).load(function() {
 							jQuery(".slick-slider").slick({
+<<<<<<< HEAD
 								appendArrows: $('.news-feed__carousel-navigation'),
 								autoplay: true,
 								autoplaySpeed: 8000,
@@ -210,6 +211,58 @@ get_header(); ?>
 								slide: '.news-feed__item',
 								slidesToScroll: 3,
 								slidesToShow: 3,
+=======
+								//accessibility: true,
+								//adaptiveHeight: false,
+								appendArrows: $('.news-feed__carousel-navigation'),
+								//appendDots: $(element),
+								//arrows: true,
+								//asNavFor: $(element)
+								autoplay: true,
+								autoplaySpeed: 8000,
+								//centerMode: false,
+								//centerPadding: '50px',
+								//cssEase: 'ease',
+								//customPaging: function(slider, i) {
+								//    return '<button type="button" data-role="none">' + (i + 1) + '</button>';
+								//},
+								//dots: false,
+								//dotsClass: 'slick-dots',
+								//draggable: true,
+								//easing: 'linear',
+								//edgeFriction: 0.15,
+								//fade: false,
+								//focusOnSelect: false,
+								//focusOnChange: false,
+								//infinite: true,
+								//initialSlide: 0,
+								//lazyLoad: 'ondemand',
+								//mobileFirst: false,
+								//nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="next">Next</button>',
+								//pauseOnDotsHover: false,
+								//pauseOnFocus: true,
+								//pauseOnHover: true,
+								//prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="previous">Previous</button>',
+								//respondTo: 'window',
+								rows: 0, //Setting this to 1 adds more divs that will require style changes, and setting this to more than 1 initializes grid mode. Use slidesPerRow to set how many slides should be in each row.
+								//rtl: false,
+								slide: '.news-feed__item',
+								//slidesPerRow: 1,
+								slidesToScroll: 3,
+								slidesToShow: 3,
+								//speed: 300,
+								//swipe: true,
+								//swipeToSlide: false,
+								//touchMove: true,
+								//touchThreshold: 5,
+								//useCSS: true,
+								//useTransform: true,
+								//variableWidth: false,
+								//vertical: false,
+								//verticalSwiping: false,
+								//waitForAnimate: true
+								//zIndex: 1000
+>>>>>>> 7c88980af092cc99303e62defe1f425b16467df1
 								responsive: [
 									{
 										breakpoint: 1242,

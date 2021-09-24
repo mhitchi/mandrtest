@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+**
+>>>>>>> 7c88980af092cc99303e62defe1f425b16467df1
 !.gitignore
 !wp-content/
 wp-content/**
@@ -47,4 +51,8 @@ cache/
 upgrade/
 uploads/
 acf-json/
+<<<<<<< HEAD
 node_modules
+=======
+node_modules/
+>>>>>>> 7c88980af092cc99303e62defe1f425b16467df1

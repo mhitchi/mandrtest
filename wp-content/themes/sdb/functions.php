@@ -60,6 +60,9 @@ function wpse_footer_db_queries(){
     echo " -->";
 	*/
 }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 7c88980af092cc99303e62defe1f425b16467df1
