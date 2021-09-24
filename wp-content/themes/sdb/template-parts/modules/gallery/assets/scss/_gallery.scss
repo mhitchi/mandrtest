@@ -1,0 +1,113 @@
+.gallery {
+    
+}
+
+.gallery-columns {
+    &-2,
+    &-3,
+    &-4 {
+        li {
+            @media (max-width: $mobile-med-max){
+                text-align: center;
+    
+                + li {
+                    margin-top: $spacing-sm;
+                }
+            }
+        }
+    }
+
+    &-2 {
+        @media (min-width: $mobile-med){
+            li {
+                width: $column-one-half;
+                margin-left: $column-margin;
+                float: left;
+    
+                &:nth-of-type(odd) {
+                    margin-left: 0;
+                }
+    
+                &:nth-of-type(n+3){
+                    margin-top: $spacing-sm;
+                }
+            }
+        }
+    }
+    &-3 {
+        @media (min-width: $mobile-med) and (max-width: $second-break-max) {
+            li {
+                width: $column-one-half;
+                margin-left: $column-margin;
+                float: left;
+    
+                &:nth-of-type(odd) {
+                    margin-left: 0;
+                }
+    
+                &:nth-of-type(n+3){
+                    margin-top: $spacing-sm;
+                }
+            }
+        }
+        @media (min-width: $second-break){
+            li {
+                width: $column-one-third;
+                margin-left: $column-margin;
+                float: left;
+    
+                &:nth-of-type(3n+1) {
+                    margin-left: 0;
+                }
+    
+                &:nth-of-type(n+4){
+                    margin-top: $spacing-sm;
+                }
+            }
+        }
+    }
+    &-4 {
+        @media (min-width: $mobile-med) and (max-width: $second-break-max) {
+            li {
+                width: $column-one-half;
+                margin-left: $column-margin;
+                float: left;
+    
+                &:nth-of-type(odd) {
+                    margin-left: 0;
+                }
+    
+                &:nth-of-type(n+3){
+                    margin-top: $spacing-sm;
+                }
+            }
+        }
+        @media (min-width: $second-break){
+            li {
+                width: $column-one-fourth;
+                margin-left: $column-margin;
+                float: left;
+    
+                &:nth-of-type(4n+1) {
+                    margin-left: 0;
+                }
+    
+                &:nth-of-type(n+5){
+                    margin-top: $spacing-sm;
+                }
+            }
+        }
+    }
+}
+
+.gallery--carousel {
+    .slick-slide {
+        position: relative;
+        z-index: 5;
+        transition: transform 350ms ease-in-out;
+    }
+
+    .slick-current + .slick-slide {
+        transform: scale(1.1);
+    }
+}

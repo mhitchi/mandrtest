@@ -1,0 +1,123 @@
+/*
+Site Header
+---------------------------------------------------------------------------------------------------- */
+
+/* Skip to content link */
+.skip-content {
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    padding: 0 5px;
+    opacity: 0;
+
+    color: $color-main;
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+
+    &:focus {
+        z-index: 500;
+        opacity: 1;
+        padding: $spacing-sm 0;
+    }
+}
+
+#header {
+    position: fixed;
+    z-index: 105;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: transform 0.35s cubic-bezier(0.17, 0.67, 0.83, 0.67),
+        opacity 0.35s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+
+    .admin-bar & {
+        top: 32px;
+
+        @media (max-width: 782px) {
+            top: 46px;
+        }
+    }
+
+    /*.scrolling-down:not(.overlay-active):not(.nav-active) & */
+    .scrolling-down:not(.nav-active) & {
+        transform: translateY(-400px);
+        opacity: 0;
+
+        &.transition-done {
+            visibility: hidden;
+            #primary-nav {
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+.header {
+    background: #fff;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    @media (max-width: $first-break) {
+        font-size: 16px;
+    }
+
+    &__container {
+        position: relative;
+        z-index: 105;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+
+        &:before,
+        &:after {
+            content: none;
+        }
+
+        @media (max-width: $second-break) {
+            padding: 0 3.5%;
+        }
+    }
+    &__logo {
+        width: 212px;
+        margin: 16px 32px 16px 0;
+
+        img {
+            display: block;
+            transition: all 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        &__link {
+            display: block;
+            background: #fff;
+
+            &:active {
+                transform: translateY(1px);
+            }
+        }
+
+        @media (max-width: $medlarge-break) {
+            margin: 16px 48px 16px 0;
+        }
+        @media (max-width: $first-break) {
+            width: 186px;
+            margin: 16px 18px 16px 0;
+        }
+        @media (max-width: $second-break) {
+            width: 156px;
+        }
+    }
+
+    &__sitetitle {
+        margin: 0;
+    }
+}

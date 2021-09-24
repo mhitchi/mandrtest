@@ -1,0 +1,25 @@
+$spacing-tiny: 12px;
+$spacing-xs: 24px;
+$spacing-sm: 34px;
+$spacing-med: 54px;
+$spacing-lg: 72px;
+$spacing-xl: 102px;
+
+// hide non-keyboard focus styles
+.js-focus-visible :focus:not(.focus-visible) {
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $color-main;
+    margin: 8px 0 10px;
+    padding: 0;
+}

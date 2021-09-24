@@ -1,0 +1,234 @@
+/* Spacer */
+.spacer {
+    clear: both;
+    padding: 12px 0;
+    display: block;
+    width: 100%;
+}
+
+@media (max-width: $mobile-break) {
+    /* Responsive CSS Columns */
+    .responsive-column-count {
+        column-count: 1 !important;
+    }
+
+    /* Responsive Images */
+    /* put the image on a line by itself, center it, remove any margin/float/alignment on the image itelf */
+    .mobile-center-image {
+        width: 100%;
+        display: block;
+        text-align: center;
+        overflow: hidden;
+        margin: 10px 0 20px;
+    }
+    .mobile-center-image > .alignleft,
+    .mobile-center-image > .alignright,
+    .mobile-center-image > a > .alignleft,
+    .mobile-center-image > a > .alignright {
+        margin: 1px 0;
+        float: none;
+        text-align: center;
+    }
+}
+
+/* Content Limiter */
+.content-limiter {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 24px;
+    transition: margin 0.5s ease-out;
+
+    &.content-limiter-off {
+        margin-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    &.animation-complete {
+        height: auto !important;
+    }
+}
+.content-limiter-expander {
+    margin-bottom: 32px;
+}
+
+.content-limiter-blur {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(
+        rgba(245, 245, 245, 0),
+        rgba(245, 245, 245, 0.8)
+    );
+
+    .content-limiter-off & {
+        display: none;
+    }
+}
+
+/* Toggle */
+.toggle {
+    margin: 0 0 24px;
+    padding: 0 0 2px 0;
+    width: 100%;
+
+    .trigger {
+        background-color: transparent;
+        display: block;
+        position: relative;
+        width: 100%;
+        height: auto;
+        border: none;
+        padding: 10px 60px 10px 12px;
+
+        color: $color-text;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &:hover,
+        &:focus {
+            background: $color-main;
+            color: #fff;
+
+            span {
+                color: #fff;
+            }
+        }
+
+        span {
+            display: block;
+            background: transparent;
+            position: absolute;
+            top: 0;
+            left: initial;
+            right: 0;
+            width: 45px;
+            height: 100%;
+
+            color: $color-text;
+            font-size: 26px;
+            line-height: 52px;
+            text-align: center;
+            transition: color 0.3s ease-in-out;
+            pointer-events: none;
+
+            &:before {
+                content: '+';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    .box {
+        overflow: hidden;
+        padding: 20px;
+    }
+
+    .active {
+        background: $color-main;
+        color: #fff;
+
+        span {
+            background: $color-main;
+            color: #fff;
+
+            &:before {
+                content: '-';
+            }
+        }
+    }
+}
+
+.hr {
+    height: 4px;
+    background: #000;
+    overflow: hidden;
+    font-size: 0px;
+    line-height: 0;
+    margin: 30px 0px;
+}
+
+.iframe-embed {
+    position: relative;
+    padding-bottom: 300px;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.popup-video {
+    background: #000;
+    display: block;
+    position: relative;
+}
+
+.popup-video:hover .youtube-link-img {
+    opacity: 0.4;
+}
+
+.youtube-embed {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    margin-bottom: 48px;
+
+    > a {
+        position: static !important;
+
+        &:hover {
+            img {
+                opacity: 1 !important;
+            }
+        }
+    }
+
+    &.full-width {
+        max-width: 100%;
+    }
+}
+
+.youtube-link-img {
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.play-hover {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    transition: all 0.3s ease-out;
+}
+a:hover > .play-hover {
+    opacity: 0.5;
+}
+.play-hover {
+    font-family: 'ikes' !important;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+
+    &:before {
+        content: '\e928';
+        @extend .abs-center;
+        font-size: 100px;
+    }
+
+    /*background: url(assets/images/play-button.png) center center no-repeat transparent;
+	background: url('data:image/png;base64,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') center center no-repeat transparent;*/
+}

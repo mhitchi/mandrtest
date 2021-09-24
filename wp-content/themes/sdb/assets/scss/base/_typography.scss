@@ -1,0 +1,271 @@
+/* Typographical Basics
+--------------------------------------------- */
+
+html {
+    font-size: 62.5%; /* 10px browser default */
+}
+body {
+    background-color: $color-background;
+    color: $color-text;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.1px;
+
+    @media (min-width: $mobile-med) {
+        font-size: 18px;
+    }
+
+    @media (min-width: $second-break) {
+        font-size: 20px;
+    }
+
+    &.nav-active {
+        overflow: hidden;
+    }
+}
+
+p + h2,
+ul + h2,
+ol + h2 {
+    margin-top: 32px;
+
+    @media (min-width: $mobile-med) {
+        margin-top: 36px;
+    }
+    @media (min-width: $second-break) {
+        margin-top: 48px;
+    }
+}
+
+p + h3,
+ul + h3,
+ol + h3 {
+    margin-top: 24px;
+
+    @media (min-width: $mobile-med) {
+        margin-top: 26px;
+    }
+    @media (min-width: $second-break) {
+        margin-top: 32px;
+    }
+}
+
+/* Headings
+--------------------------------------------- */
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 12px;
+
+    @media (min-width: $mobile-med) {
+        margin: 0 0 14px;
+    }
+    @media (min-width: $second-break) {
+        margin: 0 0 16px;
+    }
+}
+h1,
+.h1 {
+    font-size: 30px;
+
+    @media (min-width: $mobile-med) {
+        font-size: 40px;
+    }
+    @media (min-width: $second-break) {
+        font-size: 50px;
+    }
+}
+h2,
+.h2 {
+    font-size: 24px;
+    color: $color-darkblue;
+    @media (min-width: $mobile-med) {
+        font-size: 30px;
+    }
+    @media (min-width: $second-break) {
+        font-size: 35px;
+    }
+}
+.h2--larger,
+.h2-larger-container h2,
+.callout-card-style h2,
+.callout-card-style h3 {
+    font-size: 30px;
+    @media (min-width: $mobile-med) {
+        font-size: 40px;
+    }
+    @media (min-width: $second-break) {
+        font-size: 50px;
+    }
+}
+h3,
+.h3 {
+    font-size: 22px;
+    color: $color-blue;
+
+    @media (min-width: $mobile-med) {
+        font-size: 25px;
+    }
+}
+h4,
+.h4 {
+    font-size: 22px;
+    color: $color-darkblue;
+}
+h5,
+.h5 {
+    font-size: 20px;
+    font-style: italic;
+    color: $color-blue;
+}
+h6,
+.h6 {
+    font-size: 18px;
+}
+
+// Header title
+.header-title {
+    text-align: center;
+}
+
+/* Typographical Basics +
+--------------------------------------------- */
+
+.column a,
+.service-cards a,
+.cat-list a,
+.breadcrumbs a {
+    color: $color-link;
+    font-weight: 400;
+    font-style: italic;
+    text-decoration: underline;
+    text-decoration-color: $color-green;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+    transition: all 0.3s cubic-bezier(0.21, 0.66, 0.79, 1);
+
+    &:hover,
+    &:focus {
+        color: #000;
+        text-decoration-color: #000;
+    }
+
+    img {
+        vertical-align: bottom;
+    }
+}
+
+p {
+    margin: 0;
+    margin-bottom: 18px;
+    padding: 0;
+
+    @media (min-width: $mobile-med) {
+        margin-bottom: 20px;
+    }
+
+    @media (min-width: $second-break) {
+        margin-bottom: 24px;
+    }
+}
+
+strong {
+    font-weight: 700;
+}
+
+blockquote {
+    margin: 0;
+    padding: 6px 0 24px;
+    font-size: 20px;
+    font-weight: bold;
+    color: $color-blue;
+    @media (min-width: $mobile-med) {
+        padding: 8px 0 30px;
+        font-size: 26px;
+    }
+    @media (min-width: $second-break) {
+        padding: 12px 0 36px;
+        font-size: 30px;
+    }
+}
+
+.entry-content code {
+    background-color: #cbcbcb;
+    color: #000;
+}
+
+cite {
+    font-style: normal;
+}
+
+/* Selection colours */
+::selection {
+    background: $selectionColor;
+    color: #fff;
+}
+::-moz-selection {
+    background: $selectionColor;
+    color: #fff;
+}
+
+img::selection {
+    background: transparent;
+}
+img::-moz-selection {
+    background: transparent;
+}
+
+body {
+    -webkit-tap-highlight-color: $selectionColor;
+}
+
+/* Background Colors
+--------------------------------------------- */
+.bg {
+    &--dark {
+        background-color: #000;
+        color: #fff;
+
+        p,
+        a,
+        ul li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #fff;
+        }
+    }
+}
+
+/* Typographical Transitions
+--------------------------------------------- */
+
+a,
+button,
+input:focus,
+input[type='button'],
+input[type='reset'],
+input[type='submit'],
+textarea:focus,
+.button {
+    transition: color 0.3s ease,
+        background 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}

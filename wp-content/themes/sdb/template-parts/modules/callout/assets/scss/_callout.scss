@@ -1,0 +1,13 @@
+.standard-callout {
+    &__wrap {
+        padding: 69px 86px;
+        display: block;
+
+        @media (max-width: $mobile-break) {
+            padding: 48px;
+        }
+        @media (max-width: $mobile-med) {
+            padding: 24px;
+        }
+    }
+}

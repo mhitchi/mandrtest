@@ -1,0 +1,44 @@
+/* Media Query Sizes 
+http://www.w3schools.com/tags/ref_pxtoemconversion.asp
+*/
+
+// $large-break-min: 107.5625em; // 1720px
+// $large-break: 107.5em; // 1720px
+// $laptop-break-min: 92.5625em; // 1481px
+// $laptop-break: 92.5em; // 1480px
+// $first-break-min: 77.5625em; // 1241px
+// $first-break: 77.5em; // 1240px
+// $second-break-min: 64em; // 1024px
+// $second-break: 63.9375em; // 1023px
+// $mobile-break-min: 48.0625em; // 769px
+// $mobile-break: 48em; // 768px
+// $mobile-med: 40.125em; // 642px
+// $mobile-small: 29.9375em; // 479px
+// $mobile-tiny: 22.4375em; // 359px
+
+//
+//  MEDIA QUERIES
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+$large-break: em(1800);
+$medlarge-break: em(1600);
+$laptop-break: em(1481);
+$first-menu-break: em(1330);
+$pre-first-break: em(1361);
+$first-break: em(1241);
+$first-break-max: em(1240);
+$second-break-header: em(1024 + 96);
+$second-break: em(1024);
+$second-break-max: em(1023);
+$oleninesixty: em(960);
+$premobile: em(900);
+$mobile-menu-break: em(900);
+$mobile-menu-break-max: em(900);
+$mobile-menu-break-min: em(899);
+$mobile-break: em(769);
+$mobile-break-max: em(768);
+$mobile-med: em(643);
+$mobile-med-max: em(642);
+$mobile-small: em(480);
+$mobile-small-max: em(479);
+$mobile-tiny: em(360);
+$mobile-tiny-max: em(359);

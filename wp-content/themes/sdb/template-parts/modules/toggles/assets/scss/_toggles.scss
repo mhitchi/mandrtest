@@ -1,0 +1,73 @@
+/* Toggles */
+$color-toggle: #2e2e2e;
+$color-text: #fff;
+
+.toggle {
+    margin: 0 0 8px;
+    padding: 0 0 2px 0;
+    width: 100%;
+
+    &__trigger {
+        background: $color-toggle;
+        display: block;
+        position: relative;
+        width: 100%;
+        height: auto;
+        border: none;
+        padding: 10px 60px 10px 24px;
+
+        color: $color-text;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &:hover,
+        &:focus {
+            background: darken($color-toggle, 10%);
+            color: $color-text;
+        }
+
+        &-icon {
+            display: block;
+            background: transparent;
+            position: absolute;
+            top: 0;
+            left: initial;
+            right: 0;
+            width: 45px;
+            height: 100%;
+
+            color: $color-text;
+            font-size: 26px;
+            line-height: 52px;
+            text-align: center;
+            transition: color 0.3s ease-in-out;
+            pointer-events: none;
+
+            &:before {
+                content: '+';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    &__box {
+        overflow: hidden;
+        padding: 20px;
+    }
+
+    &--active {
+        background: darken($color-toggle, 10%);
+
+        .toggle {
+            &__trigger-icon {
+                &:before {
+                    content: '-';
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+.mce-container.mce-floatpanel.mce-popover {
+	width: auto !important;
+	height: auto !important;	
+}
+
+.wp-picker-container input[type="text"].wp-color-picker {
+	line-height: 22px;
+	height: 24px;
+}
+
+.wp-picker-container {
+	padding-top: 10px;
+}
+
+.wp-picker-input-wrap {
+	margin: 0 10px;
+}
+
+.tinymce-cp-body-color .wp-color-result {
+	display: none;
+}
+
+.tinymce-cp-body-color .wp-color-picker {
+	display: inline!important;
+}
+
+.tinymce-cp-body-color .wp-picker-clear {
+	display: none!important;
+}
+
+.tinymce-cp-body-color .wp-picker-container .iris-picker {
+	position: relative;
+	display: block!important;
+	height: 200px!important;
+	width: 220px!important;
+	margin-top: 0;
+	padding: 0;
+}
+
+.tinymce-cp-body-color .wp-picker-input-wrap {
+	position: absolute;
+	z-index: 1;
+	display: none;
+}
+
+.tinymce-cp-body-color .iris-picker-inner {
+	position: absolute;
+	top: 35px!important;
+	display: none;
+}
+
+.tinymce-cp-body-color .iris-palette-container {
+	position: absolute;
+	top: 0;
+	width: 200px;
+}
+
+.tinymce-cp-body-color .iris-palette {
+	width: 36px!important;
+	height: 36px!important;
+	margin: 2px!important;
+	border-radius: 0!important;
+	box-shadow: none!important;
+	position: relative;
+	background-color: #eee;
+}
+
+.tinymce-cp-body-color .iris-palette:hover:after,
+.tinymce-cp-body-color .iris-palette.active:after {
+	width: 38px;
+	height: 38px;
+	content: '';
+	display: block;
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	border: 1px solid #333;
+	box-shadow: 0 1px 0 rgba(0,0,0,.08);
+}
+
+.tinymce-cp-footer {
+	padding: 10px;
+}
+
+.tinymce-cp-body-color .tinymce-cp-custom {
+	display: block;
+	float: left;
+}
+
+.tinymce-cp-footer .tinymce-cp-apply {
+	float: right;
+}
+
+.tinymce-cp-body-color .iris-picker .iris-square {
+	width: 160px!important;
+	height: 160px!important;
+	margin-right: 10px;
+}
+
+.tinymce-cp-body-color .iris-picker .iris-slider {
+	height: 160px!important;
+}
+
+.tinymce-cp-body-color .mce-toolbar .mce-colorbutton .mce-preview {
+	margin-left: 0;
+	top: auto;
+	bottom: 2px;
+	left: 3px;
+	height: 3px;
+	width: 20px;
+}
+
+.tinymce-cp-body-color i.mce-i-backcolor {
+	font: normal 20px/1 'dashicons';
+	padding: 0;
+	vertical-align: top;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin-left: -2px;
+	padding-right: 2px;
+	content: '\f215';
+}
+
+.tinymce-cp-body-color i.mce-i-backcolor:before {
+	content: '\f215';
+}

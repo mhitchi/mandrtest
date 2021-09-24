@@ -1,0 +1,42 @@
+.module-table {
+    @include section-spacing();
+    background-color: $color-gray-light;
+    width: 100%;
+
+    &__body {
+        tbody,
+        td {
+            border: none;
+        }
+
+        &__container {
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+
+            @media (max-width: $first-break){
+                width: 100%;
+                padding: 0 5%;
+            }
+        }
+
+        &__table {
+            width: 100%;
+            min-width: 1024px;
+        }
+
+        &__row {
+            &:nth-of-type(even){
+                background-color: #fff;
+            }
+        }
+        &__heading {
+            padding: 10px 24px;
+            font-size: 18px;
+        }
+        &__data {
+            padding: 10px 24px;
+            font-size: 16px;
+        }
+    }
+}

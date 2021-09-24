@@ -1,0 +1,119 @@
+/* Tabs */
+$color-border: blue;
+
+.tabs {
+    display: flex;
+    z-index: 1;
+    flex-grow: 1;
+    overflow: hidden;
+
+    &__wrapper {
+        display: inline;
+        margin-bottom: 48px;
+    }
+
+    &-menu {
+        .tabs-menu {
+            &__tabs {
+                display: flex;
+                z-index: 1;
+                overflow: hidden;
+            }
+
+            &__navigation {
+                display: flex;
+                transition: transform 250ms ease;
+            }
+
+            &__list {
+                display: flex;
+                flex-grow: 1;
+                flex-wrap: nowrap;
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid #eee;
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+                // overflow: scroll;
+            }
+
+            &__link {
+                background: transparent;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: auto;
+                border: none;
+                border-bottom: 3px solid transparent;
+                margin: 0;
+                padding: 18px 24px;
+                color: #aaa;
+                font-size: 16px;
+                line-height: 1.2;
+                text-align: center;
+                white-space: nowrap;
+                cursor: pointer;
+
+                transition: border 250ms ease, color 250ms ease;
+
+                @media (max-width: $mobile-break) {
+                    padding: 18px 32px;
+                    font-size: 20px;
+                }
+
+                &:before {
+                    content: normal;
+                }
+
+                &[aria-selected='true'],
+                &.tab-current,
+                &:hover,
+                &:focus {
+                    border-bottom-color: $color-border;
+                    color: #000;
+                }
+            }
+        }
+
+        &__pagination {
+            background: none;
+            border: none;
+            transition: opacity 250ms ease;
+
+            &[aria-hidden='true'] {
+                display: none;
+            }
+            &[aria-hidden='false'] {
+                display: block;
+            }
+
+            &.disabled {
+                opacity: 0.2;
+                cursor: auto;
+            }
+
+            span {
+                pointer-events: none;
+            }
+        }
+    }
+
+    &-content {
+        .tabs-content {
+            &__panel {
+                display: none;
+                padding: 18px 0 32px;
+
+                &[aria-hidden='false'],
+                &.tab-current {
+                    display: inherit;
+                }
+
+                @media screen and (min-width: $mobile-break) {
+                    padding: 26px 26px 32px;
+                }
+            }
+        }
+    }
+}

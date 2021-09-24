@@ -1,0 +1,8 @@
+v1.0.2
+---------------------
+* Move mandrfeed_widget to 'normal' instead of 'side' in dashboard.
+
+v1.0.1
+---------------------
+* Add footer text.
+* Remove dashboard activity.

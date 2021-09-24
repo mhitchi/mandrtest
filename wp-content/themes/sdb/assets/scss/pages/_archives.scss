@@ -1,0 +1,133 @@
+/* Numbered pagination */
+.blog-pagination {
+    &__navigation {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul {
+        position: relative;
+        float: right;
+        margin: $spacing-sm 0 0;
+        padding: 0;
+    }
+
+    li {
+        float: left;
+        list-style-type: none;
+        margin-right: 8px;
+
+        &:before {
+            display: none;
+        }
+
+        span.current,
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            padding: 4px 8px;
+            color: $color-darkblue;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+
+        span.current {
+            color: $color-darkblue;
+            background: $color-menu-lightbluehover;
+        }
+
+        a {
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                color: $color-darkblue;
+                background: $color-menu-lightbluehover;
+            }
+        }
+    }
+}
+.blog-listing {
+    display: block;
+    padding: 0;
+    margin-bottom: 96px;
+
+    &:nth-child(2n + 1) {
+        margin-left: 0;
+        clear: both;
+    }
+
+    @media (max-width: $mobile-break) {
+        float: none;
+        margin: 0 auto 48px !important;
+    }
+
+    &__content-wrap {
+        padding: 12px 36px 48px;
+
+        @media (max-width: $first-break) {
+            padding: 12px 30px 40px;
+        }
+
+        @media (max-width: $mobile-break) {
+            padding: 12px 24px 32px;
+        }
+    }
+
+    &__image {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__header {
+        margin-bottom: 18px;
+    }
+
+    &__header__title {
+        margin-bottom: 2px;
+        a {
+            color: $color-darkblue;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            &:hover {
+                color: $color-green;
+            }
+        }
+    }
+    &__header__time {
+        margin-bottom: 4px;
+        font-size: 16px;
+        font-weight: bold;
+
+        @media (max-width: $mobile-med) {
+            font-size: 14px;
+        }
+    }
+
+    .cat-list {
+        margin-bottom: 0;
+        font-size: 16px;
+
+        @media (max-width: $mobile-med) {
+            font-size: 15px;
+        }
+    }
+
+    &__excerpt {
+        margin-bottom: 18px;
+        font-size: 17px;
+        @media (max-width: $mobile-med) {
+            font-size: 15px;
+        }
+    }
+}

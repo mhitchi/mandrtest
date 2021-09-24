@@ -1,0 +1,106 @@
+[
+    {
+        "key": "group_5cae226bdd0cd",
+        "title": "Site Scripts",
+        "fields": [
+            {
+                "key": "field_5cae3f23e497c",
+                "label": "Header Scripts (Higher Priority)",
+                "name": "mandr_site_header_scripts_hi_p_code",
+                "type": "wysiwyg",
+                "instructions": "Text added here will be echoed early into the wp_head hook of every page and post on the site. This is where Google Tag Manager's main script should go.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "text",
+                "media_upload": 0,
+                "toolbar": "full",
+                "delay": 0
+            },
+            {
+                "key": "field_5cae227dd68c4",
+                "label": "Header Scripts (Lower Priority)",
+                "name": "mandr_site_header_scripts_lo_p_code",
+                "type": "wysiwyg",
+                "instructions": "Text added here will be echoed later into the wp_head hook of every page and post on the site. This is where Schema should go.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "<!--\r\n<script type=\"application/ld+json\"> \r\n{\r\n    \"@context\": \"http://www.schema.org\",\r\n    \"@type\": \"LocalBusiness\",\r\n    \"name\": \"M&amp;R Marketing Group\",\r\n    \"legalName\" : \"M&amp;R Marketing Group LLC\",\r\n    \"url\": \"https://www.mandr-group.com\",\r\n    \"logo\": \"https://www.mandr-group.com/wp-content/themes/mandr/images/mandr-logo.png\",\r\n    \"image\": \"https://www.mandr-group.com/wp-content/themes/mandr/images/mandr-logo.png\",\r\n    \"foundingDate\": \"2008\",\r\n    \"founders\": [\r\n        {\r\n        \"@type\": \"Person\",\r\n        \"name\": \"Matthew Michael\"\r\n        },\r\n        {\r\n        \"@type\": \"Person\",\r\n        \"name\": \"Nick Rios\"\r\n                                }\r\n    ],\r\n    \"address\": {\r\n        \"@type\": \"PostalAddress\",\r\n        \"streetAddress\": \"331 3rd Street\",\r\n        \"addressLocality\": \"Macon\",\r\n        \"addressRegion\": \"GA\",\r\n        \"postalCode\": \"31201\",\r\n        \"addressCountry\": \"USA\"\r\n    },\r\n    \"telephone\": \"+1-478-621-4491\",\r\n    \"geo\": {\r\n        \"@type\": \"GeoCoordinates\",\r\n        \"latitude\": \"32.8365731\",\r\n        \"longitude\": \"-83.627142\"\r\n    },\r\n    \"openingHours\": \"Mo, Tu, We, Th, Fr 08:00-17:00\",\r\n    \"contactPoint\": {\r\n        \"@type\": \"ContactPoint\",\r\n        \"contactType\": \"Sales, Support\",\r\n        \"telephone\": \"+1-478-621-4491\",\r\n        \"email\": \"hey@mandr-group.com\"\r\n    },\r\n    \"sameAs\": [ \r\n        \"https://www.facebook.com/BolingRR\",\r\n        \"https://twitter.com/MandRGroup\",\r\n        \"http://www.linkedin.com/company/m&amp;r-marketing-group\",\r\n        \"https://www.pinterest.com/mandrmarketing/\",\r\n        \"https://www.instagram.com/mandrgroup/\",\r\n        \"https://www.mandr-group.com/feed/\"\r\n    ]\r\n}\r\n</script>\r\n-->",
+                "tabs": "text",
+                "media_upload": 0,
+                "toolbar": "full",
+                "delay": 0
+            },
+            {
+                "key": "field_5cae3fa4e497d",
+                "label": "Opening Body Scripts",
+                "name": "mandr_site_body_scripts_code",
+                "type": "wysiwyg",
+                "instructions": "Text added here will be echoed just after the opening <body> tag on every page and post on the site. This is where Google Tag Manager's body scripts should go. NOTE: This requires WordPress 5.2 and that the theme has the 'wp_body_open()' function added after the opening body tag.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "text",
+                "media_upload": 0,
+                "toolbar": "full",
+                "delay": 0
+            },
+            {
+                "key": "field_5cae3feae497e",
+                "label": "Footer Scripts",
+                "name": "mandr_site_footer_scripts_code",
+                "type": "wysiwyg",
+                "instructions": "Text added here echoes in the wp_footer hook.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "text",
+                "media_upload": 0,
+                "toolbar": "full",
+                "delay": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "mandr-site-scripts"
+                },
+                {
+                    "param": "current_user_role",
+                    "operator": "==",
+                    "value": "administrator"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
+]

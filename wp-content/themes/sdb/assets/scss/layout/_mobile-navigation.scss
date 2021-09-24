@@ -1,0 +1,222 @@
+/* Mobile Nav
+---------------------------------------------------------------------------------------------------- */
+.mobile-header__button {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    background: $color-green;
+    border-radius: 8px;
+
+    &__icon {
+        pointer-events: none; // Remove this so JavaScript click event always grabs button
+        top: -1px;
+
+        &,
+        &:before,
+        &:after {
+            background-color: #fff;
+            display: inline-block;
+            position: relative;
+            margin: 0 auto;
+            height: 6px;
+            width: 40px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        &:before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: -14px;
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: -14px;
+        }
+    }
+
+    .nav-active & {
+        .mobile-header__button__icon {
+            transform: translate(0, 0) rotate(45deg);
+        }
+        .mobile-header__button__icon:before {
+            transform: translate(0, 13px) rotate(225deg);
+            opacity: 0;
+        }
+        .mobile-header__button__icon:after {
+            transform: translate(0, -13px) rotate(90deg);
+        }
+    }
+}
+
+.mobile-menu {
+    background-color: $color-menu-lightblue;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 104;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-200%);
+    transition: transform 0.3s cubic-bezier(0.21, 0.66, 0.79, 1);
+
+    &__wrap {
+        position: fixed;
+        width: 100%;
+        height: calc(100% - 72px);
+        margin: 0;
+        padding: 25px 25px 76px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        backface-visibility: hidden;
+
+        /* Only for iOS */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    &__panel {
+        position: relative;
+        margin: auto;
+    }
+
+    &__navigation {
+        margin-bottom: 0;
+
+        &[data-level='3'] {
+            //display: none;
+
+            li a {
+                padding-left: 35px;
+                font-size: 14px;
+            }
+        }
+    }
+    &--active {
+        transform: translateY(0);
+    }
+}
+
+// Primary navigation
+.mobile-menu-primary {
+    &__item {
+        position: relative;
+        display: block;
+        width: 100%;
+
+        &__link {
+            display: inline-block;
+            padding: 2px 48px 2px 0;
+            color: $color-darkblue;
+            font-size: 22px;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: transform 0.3s cubic-bezier(0.21, 0.66, 0.79, 1);
+            text-decoration: none;
+
+            .link-text {
+                border-bottom: 3px solid transparent;
+                transition: all 0.3s cubic-bezier(0.21, 0.66, 0.79, 1);
+            }
+
+            &:hover,
+            &:active,
+            .current-menu-item > & {
+                .link-text {
+                    border-bottom-color: $color-green;
+                }
+            }
+            &:active {
+                transform: translateY(2px);
+            }
+        }
+
+        &:last-of-type &__link {
+            border-bottom: none;
+        }
+    }
+    &__item + &__item {
+        margin-top: 6px;
+    }
+
+    &__toggle {
+        display: none;
+    }
+}
+
+// Child menu styling
+.mobile-sub-menu {
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+
+    &[aria-hidden='true'] {
+        transition: left 450ms ease, visibility 50ms 450ms ease,
+            opacity 50ms 450ms ease;
+    }
+
+    &[aria-hidden='false'] {
+        transition: left 450ms ease;
+    }
+
+    // Hide tertiary menu on desktop
+    &[data-level='3'] {
+        display: none;
+    }
+
+    &__item {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+
+        &__link {
+            display: inline-block;
+            color: $color-darkblue;
+            padding-top: 2px;
+            padding-bottom: 8px;
+            padding-left: 20px;
+            padding-right: 48px;
+            font-size: 18px;
+            font-weight: 400;
+            text-decoration: none;
+            .link-text {
+                border-bottom: 3px solid transparent;
+                transition: all 0.3s cubic-bezier(0.21, 0.66, 0.79, 1);
+            }
+
+            &:hover,
+            &:active,
+            .current-menu-item > & {
+                .link-text {
+                    color: #000;
+                    border-bottom-color: $color-green;
+                }
+            }
+            &:active {
+                transform: translateY(2px);
+            }
+        }
+
+        &:last-of-type &__link {
+            border-bottom: none;
+        }
+    }
+}
+
+.mobile-menu-primary,
+.mobile-sub-menu {
+    &__item {
+        text-align: left;
+    }
+}

@@ -1,0 +1,34 @@
+.service-card {
+    @media (max-width: $oleninesixty) {
+        flex-wrap: wrap;
+    }
+    @media (max-width: $mobile-med) {
+        margin-bottom: 32px;
+    }
+
+    &__image {
+        width: 50%;
+        margin-right: 24px;
+        text-align: center;
+        @media (max-width: $oleninesixty) {
+            margin-right: 0;
+            width: 100%;
+            max-width: 240px;
+            margin-bottom: 24px;
+        }
+    }
+    &__content {
+        width: 50%;
+        text-align: left;
+        margin-left: 24px;
+        @media (max-width: $first-break) {
+            margin-left: 0;
+        }
+        @media (max-width: $oleninesixty) {
+            width: 100%;
+        }
+    }
+    &__title {
+        text-transform: uppercase;
+    }
+}
